@@ -1,7 +1,7 @@
 # BaculusPatching
 This respository is for helping patch problems detected in the main Baculus Repository
 
-Hello Professor Tinapple
+Hello, Professor Tinapple! Thank you for the help
 
 
 **Instructions for uploading videos (large video files) **
@@ -11,4 +11,4 @@ And look here for instructions on Mac: https://www.atlassian.com/git/tutorials/g
 
 Follow the instructions to install Git LFS
 
-Currently supported movie files: '.mov', '.mp3', '.mp4', '.MOV' 
+Currently supported movie files: '.mov', '.mp3', '.mp4', '.MOV'
