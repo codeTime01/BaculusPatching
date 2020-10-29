@@ -1,7 +1,19 @@
 # BaculusPatching
 This respository is for helping patch problems detected in the main Baculus Repository
 
-Hello, Professor Tinapple! Thank you for the help
+Hello, Professor Tinapple! Thank you for lending your assistance and expertise in Max programming
+
+
+Open up the project to take a look, or read on to learn a little more about the project
+
+The Project File contains 4 files. The first of which, TextFileRecordData(JUSTDMP) holds the playback device and the recording device
+
+The second holds just the recording device only and is named RecorderOnly(JUSTDMP)
+
+The third holds the interface for connecting accelerometers to Max, including GyrOSC, called AccelData.
+
+The fourth is a version of TextFileRecordData(JUSTDMP) configured to work with receiving GyrOSC from AccelData.
+
 
 
 **Instructions for uploading videos (large video files) **
