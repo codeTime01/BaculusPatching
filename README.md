@@ -1,2 +1,2 @@
 # BaculusPatching
-This is so no long email chains happen where just code is being sent 
+This respository is for helping patch problems detected in the main Baculus Repository 
