@@ -2,7 +2,7 @@
 	"name" : "Baculus_(IoT_stick_group)",
 	"version" : 1,
 	"creationdate" : 3686754666,
-	"modificationdate" : 3686779884,
+	"modificationdate" : 3687193669,
 	"viewrect" : [ 1172.0, 186.0, 300.0, 500.0 ],
 	"autoorganize" : 1,
 	"hideprojectwindow" : 0,
@@ -23,12 +23,7 @@
 ,
 			"AccelData.maxpat" : 			{
 				"kind" : "patcher",
-				"local" : 1,
-				"singleton" : 				{
-					"bootpath" : "~/Documents/GitHub/Capstone2020BAC/Max Project/Baculus_Capstone2020/patchers",
-					"projectrelativepath" : "../../Capstone2020BAC/Max Project/Baculus_Capstone2020/patchers"
-				}
-
+				"local" : 1
 			}
 
 		}
