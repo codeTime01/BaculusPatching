@@ -53,27 +53,9 @@ var VALUEarz2 = 0;
 
 
 
-var db = MS.db("mongodb://localhost:27017/sensorData")
+var db = MS.db("mongodb://localhost:27017/BacStorage")
 app.get("/", function (req, res) {
     res.redirect("/index.html");
-});
-
-app.get("/getAverage", function (req, res) {
-  var from = parseInt(req.query.from);
-  var to = parseInt(req.query.to);
-  db.collection("data").find({time:{$gt:from, $lt:to}}).toArray(function(err, result){
-  	console.log(err);
-  	console.log(result);
-  	var tempSum = 0;
-  	var humSum = 0;
-  	for(var i=0; i< result.length; i++){
-  		tempSum += result[i].t || 0;
-  		humSum += result[i].t || 0;
-  	}
-  	var tAvg = tempSum/result.length;
-  	var hAvg = humSum/result.length;
-  	res.send(tAvg + " "+  hAvg);
-  });
 });
 
 app.get("/getLatest", function (req, res) {
@@ -93,7 +75,12 @@ app.get("/getData", function (req, res) {
 
 app.get("/getValue", function (req, res) {
   //res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.send(VALUEw.toString() + " " + VALUEqx + " " + VALUEqy + " " + VALUEqz +" " + VALUEe1 + " " + VALUEe2 + " " + VALUEe3 + "\r");
+  res.send(VALUEw.toString() + " " + VALUEqx + " " + VALUEqy + " " + VALUEqz +" " + VALUEe1 + " " + VALUEe2 + " " + VALUEe3 + " " + Valuey +
+           " " + VALUEp + " " + VALUEr + " " + VALUEgrx +" " + VALUEgry + " " + VALUEgrz + " " + VALUEax + " " + Valueay + " " + Valueaz +
+            " " + VALUEawz + " " + VALUEawy + " " + VALUEawz +" " + VALUEarx + " " + VALUEary + " " + VALUEarz + " " + Valuew2 + " " + Valueqx2 +
+            " " + VALUEqy2 + " " + VALUEqz2 + " " + VALUEe12 +" " + VALUEe22 + " " + VALUEe32 + " " + VALUEy2 + " " + Valuep2 + " " + Valuer2 +
+            " " + VALUEgrx2 + " " + VALUEgry2 + " " + VALUEgrz2 +" " + VALUEax2 + " " + VALUEay2 + " " + VALUEaz2 + " " + Valueawx2 + " " + Valueawy2 +
+            " " + VALUEawz2 + " " + VALUEarx2 + " " + VALUEary2 +" " + VALUEarz2 + " " + VALUEt + "\r");
 });
 
 app.get("/sendData", function (req, res) {
@@ -143,8 +130,50 @@ app.get("/sendData", function (req, res) {
   VALUEarz2 = parseFloat(req.query.arz2);
   Valuetime = new Date().getTime();
 	var dataObj = {
-		t: VALUEt,
-		h: VALUEh,
+    w: VALUEw,
+    qx: VALUEqx,
+    qy: VALUEqy,
+    qz: VALUEqz,
+    e1: VALUEe1,
+    e2: VALUEe2,
+    e3: VALUEe3,
+    y: VALUEy,
+    p: VALUEp,
+    z: VALUEr,
+    grx: VALUEgrx,
+    gry: VALUEgry,
+    grz: VALUEgrz,
+    ax: VALUEax,
+    ay: VALUEay,
+    az: VALUEaz,
+    awx: VALUEawx,
+    awy: VALUEawy,
+    awz: VALUEawz,
+    arx: VALUEarx,
+    ary: VALUEary,
+    arz: VALUEarz,
+    w2: VALUEw2,
+    qx2: VALUEqx2,
+    qy2: VALUEqy2,
+    qz2: VALUEqz2,
+    e12: VALUEe12,
+    e22: VALUEe22,
+    e32: VALUEe32,
+    y2: VALUEy2,
+    p2: VALUEp2,
+    r2: VALUEr2,
+    grx2: VALUEgrx2,
+    gry2: VALUEgry2,
+    grz2: VALUEgrz2,
+    ax2: VALUEax2,
+    ay2: VALUEay2,
+    az2: VALUEaz2,
+    awx2: VALUEawx2,
+    awy2: VALUEawy2,
+    awz2: VALUEawz2,
+    arx2: VALUEarx2,
+    ary2: VALUEary2,
+    arz2: VALUEarz2,
 		time: VALUEtime
 	}
 	db.collection("data").insert(dataObj, function(err,result){
