@@ -78,28 +78,28 @@ function getDataFromServer()
 		"<h2> Real Acceleration X </h2> <p>" + arx + " </p>"+
 		"<h2> Real Acceleration Y </h2> <p>" + ary + " </p>"+
 		"<h2> Real Acceleration Z </h2> <p>" + arz + " </p>"+
-		"<h2> Quaternion W </h2> <p>" + w2 + " </p>"+
-		"<h2> Quaternion X </h2> <p>" + qx2 + " </p>"+
-		"<h2> Quaternion Y </h2> <p>" + qy2 + " </p>"+
-		"<h2> Quaternion Z </h2> <p>" + qz2 + " </p>"+
-		"<h2> Euler Angle One </h2> <p>" + e12 + " </p>"+
-		"<h2> Euler Angle Two </h2> <p>" + e22 + " </p>"+
-		"<h2> Euler Angle Three </h2> <p>" + e32 + " </p>"+
-		"<h2> Yaw </h2> <p>" + y2 + " </p>"+
-		"<h2> Pitch </h2> <p>" + p2 + " </p>"+
-		"<h2> Roll </h2> <p>" + r2 + " </p>"+
-		"<h2> Gravity X </h2> <p>" + grx2 + " </p>"+
-		"<h2> Gravity Y </h2> <p>" + gry2 + " </p>"+
-		"<h2> Gravity Z </h2> <p>" + grz2 + " </p>"+
-		"<h2> Acceleration X </h2> <p>" + ax2 + " </p>"+
-		"<h2> Acceleration Y </h2> <p>" + ay2 + " </p>"+
-		"<h2> Acceleration Z  </h2> <p>" + az2 + " </p>"+
-		"<h2> Acceleration in World X </h2> <p>" + awx2 + " </p>"+
-		"<h2> Acceleration in World Y </h2> <p>" + awy2 + " </p>"+
-		"<h2> Acceleration in World Z </h2> <p>" + awz2 + " </p>"+
-		"<h2> Real Acceleration X </h2> <p>" + arx2 + " </p>"+
-		"<h2> Real Acceleration Y </h2> <p>" + ary2 + " </p>"+
-		"<h2> Real Acceleration Z </h2> <p>" + arz2 + " </p>"+
+		"<h2> Quaternion W 2 </h2> <p>" + w2 + " </p>"+
+		"<h2> Quaternion X  2</h2> <p>" + qx2 + " </p>"+
+		"<h2> Quaternion Y 2 </h2> <p>" + qy2 + " </p>"+
+		"<h2> Quaternion Z  2 </h2> <p>" + qz2 + " </p>"+
+		"<h2> Euler Angle One 2 </h2> <p>" + e12 + " </p>"+
+		"<h2> Euler Angle Two  2 </h2> <p>" + e22 + " </p>"+
+		"<h2> Euler Angle Three 2 </h2> <p>" + e32 + " </p>"+
+		"<h2> Yaw 2 </h2> <p>" + y2 + " </p>"+
+		"<h2> Pitch 2 </h2> <p>" + p2 + " </p>"+
+		"<h2> Roll 2 </h2> <p>" + r2 + " </p>"+
+		"<h2> Gravity X2 </h2> <p>" + grx2 + " </p>"+
+		"<h2> Gravity Y 2</h2> <p>" + gry2 + " </p>"+
+		"<h2> Gravity Z 2</h2> <p>" + grz2 + " </p>"+
+		"<h2> Acceleration X 2</h2> <p>" + ax2 + " </p>"+
+		"<h2> Acceleration Y 2</h2> <p>" + ay2 + " </p>"+
+		"<h2> Acceleration Z 2 </h2> <p>" + az2 + " </p>"+
+		"<h2> Acceleration in World X 2</h2> <p>" + awx2 + " </p>"+
+		"<h2> Acceleration in World Y 2</h2> <p>" + awy2 + " </p>"+
+		"<h2> Acceleration in World Z2 </h2> <p>" + awz2 + " </p>"+
+		"<h2> Real Acceleration X 2</h2> <p>" + arx2 + " </p>"+
+		"<h2> Real Acceleration Y 2</h2> <p>" + ary2 + " </p>"+
+		"<h2> Real Acceleration Z 2</h2> <p>" + arz2 + " </p>"+
 		"<p> at " + new Date(parseInt(time)).toString() + "</p>";
 
 		document.getElementById("data").innerHTML = output;
@@ -113,7 +113,7 @@ function getDataFromServer()
 </head>
 
 <body style='text-align:center; font-family:Helvetica' onload='setInterval("getDataFromServer()", 1000)'>
-	<h1> Weather </h1>
+	<h1> Move Data </h1>
 	<div id='data'></div>
 	<button onclick="document.location='graph.html'" >To Graph</button>
 
