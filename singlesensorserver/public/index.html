@@ -1,0 +1,121 @@
+<html>
+<head>
+<script src='asyncReq.js'></script>
+<script>
+function getDataFromServer()
+{
+	var url = "./getValue"
+	var callback = function(data){
+		console.log(data, typeof data);
+		var args = data.split(" ");
+		console.log(args);
+		var w = args[0];
+		var qx = args[1];
+		var qy = args[2];
+		var qz = args[3];
+		var e1 = args[4];
+		var e2 = args[5];
+		var e3 = args[6];
+		var y = args[7];
+		var r = args[8];
+		var p = args[9];
+		var grx = args[10];
+		var gry = args[11];
+		var grz = args[12];
+		var ax = args[13];
+		var ay = args[14];
+		var az = args[15];
+		var awx = args[16];
+		var awy = args[17];
+		var awz = args[18];
+		var arx = args[19];
+		var ary = args[20];
+		var arz = args[21];
+		// var w2 = args[22];
+		// var qx2 = args[23];
+		// var qy2 = args[24];
+		// var qz2 = args[25];
+		// var e12 = args[26];
+		// var e22 = args[27];
+		// var e32 = args[28];
+		// var y2 = args[29];
+		// var r2 = args[30];
+		// var p2 = args[31];
+		// var grx2 = args[32];
+		// var gry2 = args[33];
+		// var grz2 = args[34];
+		// var ax2 = args[35];
+		// var ay2 = args[36];
+		// var az2 = args[37];
+		// var awx2 = args[38];
+		// var awy2 = args[39];
+		// var awz2 = args[40];
+		// var arx2 = args[41];
+		// var ary2 = args[42];
+		// var arz2 = args[43];
+		var time = args[22];
+
+		var output =
+		"<h2> Quaternion W </h2> <p>" + w + " </p>"+
+		"<h2> Quaternion X </h2> <p>" + qx + " </p>"+
+		"<h2> Quaternion Y </h2> <p>" + qy + " </p>"+
+		"<h2> Quaternion Z </h2> <p>" + qz + " </p>"+
+		"<h2> Euler Angle One </h2> <p>" + e1 + " </p>"+
+		"<h2> Euler Angle Two </h2> <p>" + e2 + " </p>"+
+		"<h2> Euler Angle Three </h2> <p>" + e3 + " </p>"+
+		"<h2> Yaw </h2> <p>" + y + " </p>"+
+		"<h2> Pitch </h2> <p>" + p + " </p>"+
+		"<h2> Roll </h2> <p>" + r + " </p>"+
+		"<h2> Gravity X </h2> <p>" + grx + " </p>"+
+		"<h2> Gravity Y </h2> <p>" + gry + " </p>"+
+		"<h2> Gravity Z </h2> <p>" + grz + " </p>"+
+		"<h2> Acceleration X </h2> <p>" + ax + " </p>"+
+		"<h2> Acceleration Y </h2> <p>" + ay + " </p>"+
+		"<h2> Acceleration Z  </h2> <p>" + az + " </p>"+
+		"<h2> Acceleration in World X </h2> <p>" + awx + " </p>"+
+		"<h2> Acceleration in World Y </h2> <p>" + awy + " </p>"+
+		"<h2> Acceleration in World Z </h2> <p>" + awz + " </p>"+
+		"<h2> Real Acceleration X </h2> <p>" + arx + " </p>"+
+		"<h2> Real Acceleration Y </h2> <p>" + ary + " </p>"+
+		"<h2> Real Acceleration Z </h2> <p>" + arz + " </p>"+
+		// "<h2> Quaternion W 2 </h2> <p>" + w2 + " </p>"+
+		// "<h2> Quaternion X  2</h2> <p>" + qx2 + " </p>"+
+		// "<h2> Quaternion Y 2 </h2> <p>" + qy2 + " </p>"+
+		// "<h2> Quaternion Z  2 </h2> <p>" + qz2 + " </p>"+
+		// "<h2> Euler Angle One 2 </h2> <p>" + e12 + " </p>"+
+		// "<h2> Euler Angle Two  2 </h2> <p>" + e22 + " </p>"+
+		// "<h2> Euler Angle Three 2 </h2> <p>" + e32 + " </p>"+
+		// "<h2> Yaw 2 </h2> <p>" + y2 + " </p>"+
+		// "<h2> Pitch 2 </h2> <p>" + p2 + " </p>"+
+		// "<h2> Roll 2 </h2> <p>" + r2 + " </p>"+
+		// "<h2> Gravity X2 </h2> <p>" + grx2 + " </p>"+
+		// "<h2> Gravity Y 2</h2> <p>" + gry2 + " </p>"+
+		// "<h2> Gravity Z 2</h2> <p>" + grz2 + " </p>"+
+		// "<h2> Acceleration X 2</h2> <p>" + ax2 + " </p>"+
+		// "<h2> Acceleration Y 2</h2> <p>" + ay2 + " </p>"+
+		// "<h2> Acceleration Z 2 </h2> <p>" + az2 + " </p>"+
+		// "<h2> Acceleration in World X 2</h2> <p>" + awx2 + " </p>"+
+		// "<h2> Acceleration in World Y 2</h2> <p>" + awy2 + " </p>"+
+		// "<h2> Acceleration in World Z2 </h2> <p>" + awz2 + " </p>"+
+		// "<h2> Real Acceleration X 2</h2> <p>" + arx2 + " </p>"+
+		// "<h2> Real Acceleration Y 2</h2> <p>" + ary2 + " </p>"+
+		// "<h2> Real Acceleration Z 2</h2> <p>" + arz2 + " </p>"+
+		"<p> at " + new Date(parseInt(time)).toString() + "</p>";
+
+		document.getElementById("data").innerHTML = output;
+
+	}
+	loadFile(url, callback);
+}
+
+
+</script>
+</head>
+
+<body style='text-align:center; font-family:Helvetica' onload='setInterval("getDataFromServer()", 1000)'>
+	<h1> Move Data </h1>
+	<div id='data'></div>
+	<button onclick="document.location='graph.html'" >To Graph</button>
+
+</body>
+</html>
